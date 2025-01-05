@@ -1,0 +1,27 @@
+.contactsBar {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  background-color: #222;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  transition: transform 0.3s ease-in-out;
+}
+
+.hidden {
+  transform: translateY(-100%);
+}
+
+.leftContainer {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.rightContainer {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}

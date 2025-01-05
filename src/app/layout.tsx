@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist_Mono } from "next/font/google";
+import "./normalize.css"
 import "./globals.css";
+import Nav from "@/components/Nav/Nav";
+import Contacts from "@/components/Contacts/Contacts";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -24,8 +23,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${geistMono.variable} body`}>
+        <header>
+          <Contacts/>
+          <div className={'logo-nav-block'}><div>Logo</div><Nav/></div>
+        </header>
+        <main>
         {children}
+        </main>
+        <footer></footer>
       </body>
     </html>
   );
