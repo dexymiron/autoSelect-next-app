@@ -1,0 +1,124 @@
+.page {
+}
+
+.ticker {
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: #fff;
+  color: #333;
+  padding: 10px 0;
+  font-size: 16px;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 10px;
+}
+
+.tickerTitle {
+  color: gray;
+}
+
+.tickerText {
+  display: inline-block;
+  animation: marquee 10s linear infinite;
+  color: gray;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(3%);
+  }
+  50% {
+    transform: translateX(40%);
+  }
+  100% {
+    transform: translateX(3%);
+  }
+}
+
+.CarSliderContainer {
+  padding-bottom: 300px;
+  padding-top: 0;
+}
+
+.whoWeAreContainer {
+  max-width: 1200px;
+  padding-inline: 10px;
+  margin-inline: auto;
+}
+
+.leftRigthBlocksContainer {
+  display: flex;
+  gap: 80px;
+  padding-bottom: 50px;
+}
+
+.whoWeAreTitle {
+  position: relative;
+  font-size: 48px;
+  font-weight: 300;
+}
+
+.topLine {
+  position: relative;
+}
+
+.topLine::before {
+  content: "";
+  position: absolute;
+  bottom: 7px;
+  left: 20px;
+  width: 30px;
+  height: 1px;
+  background-color: red;
+}
+
+.whoWeAreTitle::before {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 30px;
+  height: 1px;
+  background-color: red;
+}
+
+.whoWeAreTitle::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 40px;
+  width: 30px;
+  height: 1px;
+  background-color: red;
+}
+
+.orderBtn {
+  background-color: #d01818;
+  color: white;
+  padding: 5px;
+  font-size: 21px;
+  border: 0;
+  transition: background-color 0.5s ease;
+}
+
+.orderBtn:hover {
+  background-color: brown;
+}
+
+.titleHeaders {
+  font-weight: 700;
+  font-size: 21px;
+}
+
+.articleTexts {
+  font-size: 16px;
+  padding-bottom: 25px;
+}
+
+.lines {
+  max-width: 5%;
+  margin-left: 0;
+  height: 5px;
+  background-color: red;
+  border: 0;
+}

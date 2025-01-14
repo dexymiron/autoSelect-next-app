@@ -1,0 +1,74 @@
+.slider {
+  max-width: 1750px;
+  max-height: 700px;
+  margin-inline: auto;
+}
+
+.slideText {
+  position: absolute;
+  right: 15%;
+  top: 25%;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.btnsContainer {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-start;
+}
+
+.btnLeft {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 5px;
+  font-size: 21px;
+}
+
+.btnRight {
+  background-color: #d01818;
+  color: white;
+  padding: 5px;
+  font-size: 21px;
+  border: 0;
+  transition: background-color 0.5s ease;
+}
+
+.btnRight:hover {
+  background-color: brown;
+}
+
+.line {
+  width: 30%;
+  margin-left: 0;
+}
+
+@media (max-width: 1400px) {
+  .slider {
+    max-width: 800px;
+  }
+}
+
+@media (max-width: 768px) {
+  .slider {
+    max-width: 450px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slider {
+    max-width: 300px;
+  }
+}

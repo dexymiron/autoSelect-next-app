@@ -4,6 +4,9 @@ import "./normalize.css"
 import "./globals.css";
 import Nav from "@/components/Nav/Nav";
 import Contacts from "@/components/Contacts/Contacts";
+import store from "../redux/store";
+import ClientProvider from "@/components/Provider/ClientProvider";
+import Image from "next/image";
 
 
 const geistMono = Geist_Mono({
@@ -24,14 +27,35 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistMono.variable} body`}>
-        <header>
-          <Contacts/>
-          <div className={'logo-nav-block'}><div>Logo</div><Nav/></div>
-        </header>
-        <main>
-        {children}
-        </main>
-        <footer></footer>
+        <ClientProvider store={store}>
+          <header>
+            <div className={'contacts-bar-wrapper-background'}><Contacts/></div>
+            <div className={'logo-nav-block'}><div>Logo</div><Nav/></div>
+          </header>
+          <main>
+          {children}
+          </main>
+          <footer>
+            <section className={'footerWithInfo'}>
+              <article className={'leftColumn'}>
+                <Image src="/carLogo.jpg" alt="carLogo" width={100} height={100}/>
+                <p>Співпраця з Sell Poexal – запорука бути щасливим власником бажаного авто.</p>
+                <div></div>
+              </article>
+              <article className={'rightColumn'}>
+                <p>Інформація</p>
+                <a href="" className={'rColFooterRef'}>Зворотній зв'язок через мессенджери</a>
+                <a href="" className={'rColFooterRef'}>dexymiron@gmail.com</a>
+                <a href="" className={'rColFooterRef'}>@dexymiron</a>
+                <p>Пн - Пт : 10:00 до 19:00</p>
+                <a href="" className={'rColFooterRef'}>Долучитися до нашої команди експертів @sellpoexalExperts</a>
+              </article>
+            </section>
+            <div className={'rights-reserved'}>
+              Sell Poexal 2025. All Rights Reserved.
+            </div>
+          </footer>
+        </ClientProvider>
       </body>
     </html>
   );
