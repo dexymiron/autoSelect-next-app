@@ -2,10 +2,12 @@
 
 import { configureStore } from "@reduxjs/toolkit";
 import servicesReducer from "./servicesSlice";
+import popUpReducer from "./popUpFormSlice";
 
 const store = configureStore({
     reducer: {
         services: servicesReducer,
+        popUp: popUpReducer,
     },
 });
 

@@ -65,3 +65,14 @@ p {
   justify-content: space-between;
   align-items: center;
 }
+
+input,
+textarea {
+  box-sizing: border-box;
+  padding-inline: 10px;
+  padding-block: 8px;
+  font-size: 24px;
+  line-height: 1.5;
+  border: 1px solid #ccc;
+  outline: none;
+}

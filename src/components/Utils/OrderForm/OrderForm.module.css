@@ -1,0 +1,61 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 40px;
+}
+
+.formTitle {
+  font-size: 24px;
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+.inputName {
+  font-size: 24px;
+}
+
+.inputPhone {
+}
+
+.searchPhone {
+  font-size: 24px;
+}
+
+.inputInfo {
+  resize: none;
+}
+
+.inputs {
+  min-width: 350px;
+  min-height: 50px;
+  font-size: 24px !important;
+  border-radius: 5px;
+}
+
+.submitBtn {
+  min-width: 350px;
+  min-height: 50px;
+  background: linear-gradient(to right, rgb(0, 206, 0) 0%, rgb(1, 149, 1) 50%);
+  border: none;
+  border-radius: 5px;
+  font-size: 24px;
+}
+
+.submitBtn:hover {
+  background: rgba(1, 180, 1, 0.805);
+  border: 2px solid rgb(1, 114, 1);
+}
+
+.fieldTitles {
+  font-size: 24px;
+  padding-bottom: 5px;
+}
+
+.error {
+  border: 1px solid red;
+}
+
+.errorText {
+  color: red;
+}

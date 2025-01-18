@@ -1,8 +1,16 @@
+'use client'
 import CarSlider from "@/components/Utils/CarSlider";
 import styles from "./page.module.css";
-import Image from "next/image";
+import { useDispatch } from "react-redux";
+import { togglePopUp } from "@/redux/popUpFormSlice";
 
 export default function Home() {
+
+  const dispatch = useDispatch();
+  const handleInputChange = () => {
+    dispatch(togglePopUp());
+  }
+
   return (
     <>
     <div className={styles.page}>
@@ -30,7 +38,9 @@ export default function Home() {
               Наша команда експертів порекомендує лише найкращий варіант із п
               ропозицій на ринку за Вашими критеріями вибору та рамках бюджету.
             </p>
-            <button className={styles.orderBtn}>Замовити</button>
+
+            <button className={styles.orderBtn} onClick={() => handleInputChange()}>Замовити</button>
+
           </article>
           <article>
             <div>
